@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box
+  }
+
+  /* Full-width input fields */
+  input[type=text],
+  input[type=text],
+  input[type=date],
+  input[type=number],
+  input[type=text],
+  input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=text]:focus,
+  input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+    text-align: center;
+    color: aliceblue;
+    text-decoration: none;
+  }
+
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn,
+  .signupbtn {
+    float: left;
+    width: 50%;
+  }
+
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  #program {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+
+    .cancelbtn,
+    .signupbtn {
+      width: 100%;
+    }
+  }
+</style>
+
+<body>
+  <link href="css/styles.css" rel="stylesheet" />
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand" href="index.html">Hustlers University</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <form action="/Data-Managment-Group-21/courseRegistration.php" style="border:1px solid #ccc" method="post">
+    <div class="container">
+      <h1>Enter Information</h1>
+      <p>Please check the classes you would like to register for.</p>
+      <hr>
+      <input type="checkbox" id="COMM1050" name="COMM1050">
+      <label for="Communications">COMM1050: Communications</label><br>
+
+      <input type="checkbox" id="ELEE2010" name="ELEE2010">
+      <label for="Digital Systems">ELEE2010: Digital Systems</label><br>
+
+      <input type="checkbox" id="MATH1010" name="MATH1010">
+      <label for="Calculus 1">MATH1010: Calculus</label><br>
+
+      <input type="checkbox" id="BUSI2040" name="BUSI2040">
+      <label for="Information Systems">BUSI2040: Information systems</label><br>
+
+      <input type="checkbox" id="MATH1020" name="MATH1020">
+      <label for="Calculus 2">MATH1020: Calculus2</label><br><br>
+
+
+
+      </br></br></br>
+
+      <div class="clearfix">
+        <a type="button" class="cancelbtn" id="bu" href="studentRegistration.html"> Cancel</a>
+
+
+        <button type="submit" class="signupbtn">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  </br></br>
+
+</body>
+
+</html> 

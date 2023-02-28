@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<body scroll="no" style="overflow: hidden">
+    
+    <script>
+        function validate(evt) {
+          var theEvent = evt || window.event;
+        
+          // Handle paste
+          if (theEvent.type === 'paste') {
+              key = event.clipboardData.getData('text/plain');
+          } else {
+          // Handle key press
+              var key = theEvent.keyCode || theEvent.which;
+              key = String.fromCharCode(key);
+          }
+          var regex = /[0-9]|\./;
+          if( !regex.test(key) ) {
+            theEvent.returnValue = false;
+            if(theEvent.preventDefault) theEvent.preventDefault();
+          }
+        }
+      </script>
+
+<link href="css/styles.css" rel="stylesheet" />
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="index.html">Hustlers University</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <link rel="stylesheet" href="loginStyle.css">
+        <h1>Please Login</h1>
+    </header>
+    <main>
+     
+        <form id="login_form" class="form_class" action="login.php" method="post">
+            <div class="form_div">
+                <label>Login:</label>
+                <input class="field_class" id="studentNUM" name="studentNUM" type="text" onkeypress='validate(event)' minlength="9" maxlength="9" placeholder="Student Number" autofocus required>
+                <label>Password:</label>
+                <input id="pass" class="field_class" name="pass" type="password" placeholder="Password"  required>
+                
+                <button class="submit_class" type="submit" form="login_form" onclick="return validarLogin()">Enter</button>
+            </div>
+            <div class="info_div">
+                <p><fieldset></fieldset> <a href="RegisterStudents.html">Create Account</a></p>
+            </div>
+            
+        </form>
+    </main>
+    <footer>
+        <p> <a href="#"></a></p>
+    </footer>
+
+</body>
+</html>

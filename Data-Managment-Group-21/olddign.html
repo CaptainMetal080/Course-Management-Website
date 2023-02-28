@@ -1,0 +1,26 @@
+<body>
+    <header>
+        <link rel="stylesheet" href="loginStyle.css">
+        <h1>Please Signuo </h1>
+    </header>
+    <main>
+     
+        <form id="login_form" class="form_class" action="login/login-access.php" method="post">
+            <div class="form_div">
+                <label>Login:</label>
+                <input class="field_class" name="login_txt" type="text" placeholder="Student Number" autofocus>
+                <label>Password:</label>
+                <input id="pass" class="field_class" name="password_txt" type="password" placeholder="Password">
+                
+                <button class="submit_class" type="submit" form="login_form" onclick="return validarLogin()">Enter</button>
+            </div>
+            <div class="info_div">
+                <p><fieldset></fieldset> <a href="register/reg-form.php">Create Account</a></p>
+            </div>
+            
+        </form>
+    </main>
+    <footer>
+        <p> <a href="#"></a></p>
+    </footer>
+</body> 
